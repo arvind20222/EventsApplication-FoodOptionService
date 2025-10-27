@@ -10,7 +10,7 @@ import com.fsd.entity.Event;
 
 //import feign.Headers;
 
-@FeignClient(name = "EVENTSERVICE", url = "http://localhost:7070")
+@FeignClient(name = "EVENTSERVICE", url = "${event.service.url}")
 public interface EventClient {
 
     @GetMapping("/events/{id}")
